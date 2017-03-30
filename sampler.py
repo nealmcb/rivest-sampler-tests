@@ -13,6 +13,15 @@ sampler_version = "June 2, 2012"
 # This version (6/2/12) has printing_wanted set to False in generate_outputs,
 # but is otherwise the same as the November 2011 version.  This change was
 # made so that generate_outputs could be conveniently called from audit.py
+#
+# (Note added 2014-09-07: As per a suggestion by Chris Jerdonek, one should
+#  consider this proposal as based on the use of  UTF-8 encoding for strings 
+#  throughout.  This comment resolves some potential ambiguities about how 
+#  strings are converted to byte sequences before hashing, and the types of
+#  strings input by raw_input, etc.  See
+#    https://github.com/cjerdonek/rivest-sampler-tests
+# for more discussion and test-cases.
+# )
 
 """
 This program provides a reference implementation of a recommended procedure 
