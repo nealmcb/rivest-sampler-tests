@@ -3,12 +3,16 @@
 # Written by Ronald L. Rivest
 # filename: sampler.py
 # url: http://people.csail.mit.edu/rivest/sampler.py
-sampler_version = "November 14, 2011"
+sampler_version = "June 2, 2012"
 # 
 # Relevant to document being produced by an ad-hoc working group chaired
 # by Prof. Philip Stark (U.C. Berkeley) regarding election auditing.
 # Tested using python version 2.6.7.   (see www.python.org)
 # (Will not work with Python version 3, e.g. 3.x.y)
+#
+# This version (6/2/12) has printing_wanted set to False in generate_outputs,
+# but is otherwise the same as the November 2011 version.  This change was
+# made so that generate_outputs could be conveniently called from audit.py
 
 """
 This program provides a reference implementation of a recommended procedure 
@@ -369,7 +373,7 @@ def generate_outputs(n,with_replacement,a,b,seed,skip):
     new_output_list = [ ]
     old_output_list = [ ]
     count = 0        
-    printing_wanted = True
+    printing_wanted = False
     if printing_wanted:
         print "(6) Generating output:"
 
@@ -631,4 +635,5 @@ def main():
     print
     print "Done."
 
-main()
+if __name__=="__main__":
+    main()
