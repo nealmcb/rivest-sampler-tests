@@ -398,7 +398,7 @@ def generate_outputs(n,with_replacement,a,b,seed,skip,printing_wanted=False):
         hash_input = seed + "," + str(count)
         # Apply SHA-256, interpreting hex output as hexadecimal integer
         # to yield 256-bit integer (a python "long integer")
-        hash_output = int(hashlib.sha256(hash_input).hexdigest(),16)
+        hash_output = int(hashlib.sha256(hash_input.encode('utf-8')).hexdigest(),16)
         # determine "pick" as pseudo-random value in range a to b, inclusive,
         # as a function of hash_output
         pick = int(a + (hash_output % (b-a+1)))
@@ -423,9 +423,9 @@ def print_list(L):
     Print list L of integers, with at most 10 per line
     """
     for i in range(0,len(L),10):
-        print("    ", end=' ')
+        print("   ", end=' ')
         for j in range(min(10,len(L)-i)):
-            print("%7d "%L[i+j], end=' ')
+            print(" %7d"%L[i+j], end=' ')
         print()
 
 def write_list_to_file(file,L):
@@ -487,7 +487,7 @@ def main():
             break
         seedlist.append(seed_value)
     # concatenate all seeds together
-    seed = string.join(seedlist,"")
+    seed = "".join(seedlist)
     print("    ------")
     print("    Seed =",str(seed))
     print()
@@ -515,9 +515,7 @@ def main():
     print("    Example:")
     print("        Duplicates OK (sample with replacement) (y or n)? >>> n")
     print()
-    with_replacement = input("    Duplicates OK (sample with replacement) (y or n)? >>> ")
-    with_replacement = string.strip(with_replacement)
-    with_replacement = string.lower(with_replacement)
+    with_replacement = input("    Duplicates OK (sample with replacement) (y or n)? >>> ").strip().lower()
     assert (with_replacement == 'y' or with_replacement == 'n')
     with_replacement = (with_replacement == 'y')
     print("    ------")
@@ -531,10 +529,8 @@ def main():
     print("    Example:")
     print("        Is this an expanded version of a previously generated sample? >>> n")
     print() 
-    expanded_sample = input("    Is this an expanded version of a previously generated sample? >>> ")
+    expanded_sample = input("    Is this an expanded version of a previously generated sample? >>> ").strip().lower()
     print()
-    expanded_sample = string.strip(expanded_sample)
-    expanded_sample = string.lower(expanded_sample)
     assert (expanded_sample == 'y' or expanded_sample == 'n')
     expanded_sample = (expanded_sample == 'y')
     if expanded_sample:
