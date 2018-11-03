@@ -354,7 +354,7 @@ import datetime
 import platform
 python_version = platform.python_version()
 
-def generate_outputs(n,with_replacement,a,b,seed,skip):
+def generate_outputs(n,with_replacement,a,b,seed,skip,printing_wanted=False):
     """
     This routine returns two lists:
         a list of size 'skip' of "old output values" (i.e., the "previous sample")
@@ -382,7 +382,6 @@ def generate_outputs(n,with_replacement,a,b,seed,skip):
     new_output_list = [ ]
     old_output_list = [ ]
     count = 0        
-    printing_wanted = False
     if printing_wanted:
         print "(6) Generating output:"
 
