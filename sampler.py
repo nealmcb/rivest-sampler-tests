@@ -1,22 +1,16 @@
-from __future__ import print_function
-from builtins import str
-from builtins import input
-from builtins import range
 # Reference implementation code for pseudo-random sampler
 # for election audits or other purposes.
 # Written by Ronald L. Rivest
 # filename: sampler.py
-# url: http://people.csail.mit.edu/rivest/sampler.py
-sampler_version = "June 2, 2012"
+# Original url: http://people.csail.mit.edu/rivest/sampler.py
 # 
 # Relevant to document being produced by an ad-hoc working group chaired
 # by Prof. Philip Stark (U.C. Berkeley) regarding election auditing.
-# Tested using python version 2.6.7.   (see www.python.org)
-# (Will not work with Python version 3, e.g. 3.x.y)
+# Tested using python versions 2.7 and 3.7.   (see www.python.org)
 #
-# This version (6/2/12) has printing_wanted set to False in generate_outputs,
-# but is otherwise the same as the November 2011 version.  This change was
-# made so that generate_outputs could be conveniently called from audit.py
+# This version makes printing_wanted a paramater to generate_outputs, defaulting
+# to False. Results are the same as the November 2011 version.  This allows
+# it to be used from other code, with or without more detailed output.
 #
 # (Note added 2014-09-07: As per a suggestion by Chris Jerdonek, one should
 #  consider this proposal as based on the use of  UTF-8 encoding for strings 
@@ -309,36 +303,38 @@ Sorted output list:
         779,     786,     787,     789,     792,     816,     821, 
 
 Done.
-
 """
 
 ################################################################################
 ## Standard "MIT License"  http://www.opensource.org/licenses/mit-license.php ##
 ################################################################################
-"""
-Copyright (c) 2011 Ronald L. Rivest
+# Copyright (c) 2011 Ronald L. Rivest
 
-Permission is hereby granted, free of charge, to any person obtaining
-a copy of this software and associated documentation files (the
-"Software"), to deal in the Software without restriction, including
-without limitation the rights to use, copy, modify, merge, publish,
-distribute, sublicense, and/or sell copies of the Software, and to
-permit persons to whom the Software is furnished to do so, subject to
-the following conditions:
+# Permission is hereby granted, free of charge, to any person obtaining
+# a copy of this software and associated documentation files (the
+# "Software"), to deal in the Software without restriction, including
+# without limitation the rights to use, copy, modify, merge, publish,
+# distribute, sublicense, and/or sell copies of the Software, and to
+# permit persons to whom the Software is furnished to do so, subject to
+# the following conditions:
 
-The above copyright notice and this permission notice shall be
-included in all copies or substantial portions of the Software.
+# The above copyright notice and this permission notice shall be
+# included in all copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
-LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
-OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
-WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-"""
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+# EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+# NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+# LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+# OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+# WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ################################################################################
 ################################################################################
+
+from __future__ import print_function
+from builtins import str
+from builtins import input
+from builtins import range
 
 # import library of cryptography hash functions
 # This program uses SHA-256 hash function
@@ -357,6 +353,8 @@ import datetime
 # get python version
 import platform
 python_version = platform.python_version()
+
+sampler_version = "1.1.0"
 
 def generate_outputs(n,with_replacement,a,b,seed,skip,printing_wanted=False):
     """
