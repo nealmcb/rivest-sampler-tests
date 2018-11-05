@@ -1,0 +1,452 @@
+============================= test session starts ==============================
+platform linux2 -- Python 2.7.15rc1, pytest-3.3.2, py-1.5.2, pluggy-0.6.0
+rootdir: /srv/s/electionaudits/rivest-sampler-tests, inifile:
+plugins: cov-2.5.1
+collected 15 items
+
+test/test_sampler.py ..........
+SAMPLER -- pseudo-random sample generation for election auditing or other uses.
+Written by Ronald L. Rivest.
+Sampler version:  1.1.0
+Python version:  2.7.15rc1
+Generates a sample of size n of integers from a to b (inclusive)
+based on supplied parameters, including seed value(s)
+and the specification as to whether sampling with replacement is desired.
+
+Current date/time: 2018-11-04 18:09:42.097194
+
+(1) Enter text describing election id (e.g. name and date), then hit return
+    This is for documentation purposes only, and does not affect computation.
+    Example: 
+        Election ID >>> Gotham City Mayor's Race, November 2072
+
+    Election ID >>>     ------
+    Election ID = test
+
+(2) Enter one or more lines of text giving random number seed values.
+    These are typically decimal numbers, but may be arbitrary strings.
+    Embedded blanks OK, but initial and trailing blanks ignored.
+    Using decimal dice to generate these values is good practice.
+    Having different parties generate different seed values is good practice.
+    Having at least 24 random digits entered total is good practice.
+    When finished, enter a blank line.
+    Example: (USE NEW RANDOM VALUES, NOT THESE ONES)
+        seed value (or blank line when done) >>> 314525782315
+        seed value (or blank line when done) >>> 667241589410
+        seed value (or blank line when done) >>> 
+
+    seed value (or blank line when done) >>>     seed value (or blank line when done) >>>     ------
+    Seed = seed
+
+(3) Outputs will be in range  a  to  b , inclusive
+    Enter integer a (start of range)
+    Example:
+        a >>> 1
+
+    a >>> 
+    Enter integer b (end of range)
+    Example:
+        b >>> 213
+
+    b >>>     ------
+    a =  1 , b =  1000
+    N = 1000  (number of integers in set to draw sample from)
+
+(4) Are duplicates OK (i.e. sample with replacement)?
+    Example:
+        Duplicates OK (sample with replacement) (y or n)? >>> n
+
+    Duplicates OK (sample with replacement) (y or n)? >>>     ------
+    Duplicate outputs OK (that is, sampling 'with replacement').
+
+(5) Are you now asking for an expanded version of a previously generated sample?
+    Example:
+        Is this an expanded version of a previously generated sample? >>> n
+
+    Is this an expanded version of a previously generated sample? >>> 
+    How many outputs do you want (integer n)?
+    Example: 
+        n >>> 43
+
+    n >>>     ------
+    Request is for a new sample of size n = 10
+
+
+    Unsorted list of outputs:
+         315      474      734      604      864      614       48      673       71      992 
+
+    Sorted list of outputs:
+          48       71      315      474      604      614      673      734      864      992 
+
+(7) Saving results to file if desired.
+    Example: 
+        Name of output file (or blank line if saving results to file not desired): sample-2072-11-03.txt
+
+    Name of output file (or blank line if saving results to file not desired):     No output file written.
+
+Current date/time: 2018-11-04 18:09:42.097666
+
+Done.
+.
+SAMPLER -- pseudo-random sample generation for election auditing or other uses.
+Written by Ronald L. Rivest.
+Sampler version:  1.1.0
+Python version:  2.7.15rc1
+Generates a sample of size n of integers from a to b (inclusive)
+based on supplied parameters, including seed value(s)
+and the specification as to whether sampling with replacement is desired.
+
+Current date/time: 2018-11-04 18:09:42.098620
+
+(1) Enter text describing election id (e.g. name and date), then hit return
+    This is for documentation purposes only, and does not affect computation.
+    Example: 
+        Election ID >>> Gotham City Mayor's Race, November 2072
+
+    Election ID >>>     ------
+    Election ID = test
+
+(2) Enter one or more lines of text giving random number seed values.
+    These are typically decimal numbers, but may be arbitrary strings.
+    Embedded blanks OK, but initial and trailing blanks ignored.
+    Using decimal dice to generate these values is good practice.
+    Having different parties generate different seed values is good practice.
+    Having at least 24 random digits entered total is good practice.
+    When finished, enter a blank line.
+    Example: (USE NEW RANDOM VALUES, NOT THESE ONES)
+        seed value (or blank line when done) >>> 314525782315
+        seed value (or blank line when done) >>> 667241589410
+        seed value (or blank line when done) >>> 
+
+    seed value (or blank line when done) >>>     seed value (or blank line when done) >>>     ------
+    Seed = seed
+
+(3) Outputs will be in range  a  to  b , inclusive
+    Enter integer a (start of range)
+    Example:
+        a >>> 1
+
+    a >>> 
+    Enter integer b (end of range)
+    Example:
+        b >>> 213
+
+    b >>>     ------
+    a =  1 , b =  1000
+    N = 1000  (number of integers in set to draw sample from)
+
+(4) Are duplicates OK (i.e. sample with replacement)?
+    Example:
+        Duplicates OK (sample with replacement) (y or n)? >>> n
+
+    Duplicates OK (sample with replacement) (y or n)? >>>     ------
+    Duplicate outputs not allowed (that is sampling 'without replacement')
+
+(5) Are you now asking for an expanded version of a previously generated sample?
+    Example:
+        Is this an expanded version of a previously generated sample? >>> n
+
+    Is this an expanded version of a previously generated sample? >>> 
+    How many outputs do you want (integer n)?
+    Example: 
+        n >>> 43
+
+    n >>>     ------
+    Request is for a new sample of size n = 10
+
+
+    Unsorted list of outputs:
+         315      474      734      604      864      614       48      673       71      992 
+
+    Sorted list of outputs:
+          48       71      315      474      604      614      673      734      864      992 
+
+(7) Saving results to file if desired.
+    Example: 
+        Name of output file (or blank line if saving results to file not desired): sample-2072-11-03.txt
+
+    Name of output file (or blank line if saving results to file not desired):     No output file written.
+
+Current date/time: 2018-11-04 18:09:42.099068
+
+Done.
+.
+SAMPLER -- pseudo-random sample generation for election auditing or other uses.
+Written by Ronald L. Rivest.
+Sampler version:  1.1.0
+Python version:  2.7.15rc1
+Generates a sample of size n of integers from a to b (inclusive)
+based on supplied parameters, including seed value(s)
+and the specification as to whether sampling with replacement is desired.
+
+Current date/time: 2018-11-04 18:09:42.099927
+
+(1) Enter text describing election id (e.g. name and date), then hit return
+    This is for documentation purposes only, and does not affect computation.
+    Example: 
+        Election ID >>> Gotham City Mayor's Race, November 2072
+
+    Election ID >>>     ------
+    Election ID = test
+
+(2) Enter one or more lines of text giving random number seed values.
+    These are typically decimal numbers, but may be arbitrary strings.
+    Embedded blanks OK, but initial and trailing blanks ignored.
+    Using decimal dice to generate these values is good practice.
+    Having different parties generate different seed values is good practice.
+    Having at least 24 random digits entered total is good practice.
+    When finished, enter a blank line.
+    Example: (USE NEW RANDOM VALUES, NOT THESE ONES)
+        seed value (or blank line when done) >>> 314525782315
+        seed value (or blank line when done) >>> 667241589410
+        seed value (or blank line when done) >>> 
+
+    seed value (or blank line when done) >>>     seed value (or blank line when done) >>>     ------
+    Seed = seed
+
+(3) Outputs will be in range  a  to  b , inclusive
+    Enter integer a (start of range)
+    Example:
+        a >>> 1
+
+    a >>> 
+    Enter integer b (end of range)
+    Example:
+        b >>> 213
+
+    b >>>     ------
+    a =  1 , b =  1000
+    N = 1000  (number of integers in set to draw sample from)
+
+(4) Are duplicates OK (i.e. sample with replacement)?
+    Example:
+        Duplicates OK (sample with replacement) (y or n)? >>> n
+
+    Duplicates OK (sample with replacement) (y or n)? >>>     ------
+    Duplicate outputs OK (that is, sampling 'with replacement').
+
+(5) Are you now asking for an expanded version of a previously generated sample?
+    Example:
+        Is this an expanded version of a previously generated sample? >>> n
+
+    Is this an expanded version of a previously generated sample? >>> 
+    What was the size of that previous sample? 
+    Example: 
+        What was the size of the previous sample? >>> 21
+
+    What was the size of the previous sample? >>> 
+    How many additional output elements do you now want? 
+    Example: 
+        How many additional output elements do you now want? >>> 25
+
+    How many additional output elements do you now want? >>> 
+    ------
+    Request is for an expanded sample.
+    Size of previous sample (number of elements to skip now) is 10
+    Number of new elements to generate is 10
+
+
+    Unsorted list of outputs in previous sample:
+         315      474      734      604      864      614       48      673       71      992 
+
+    Sorted list of outputs in previous sample:
+          48       71      315      474      604      614      673      734      864      992 
+
+    Unsorted list of new outputs:
+         884      316      714      363      248       18      569      841      304      462 
+
+    Sorted list of new outputs:
+          18      248      304      316      363      462      569      714      841      884 
+
+(7) Saving results to file if desired.
+    Example: 
+        Name of output file (or blank line if saving results to file not desired): sample-2072-11-03.txt
+
+    Name of output file (or blank line if saving results to file not desired):     No output file written.
+
+Current date/time: 2018-11-04 18:09:42.100734
+
+Done.
+.
+SAMPLER -- pseudo-random sample generation for election auditing or other uses.
+Written by Ronald L. Rivest.
+Sampler version:  1.1.0
+Python version:  2.7.15rc1
+Generates a sample of size n of integers from a to b (inclusive)
+based on supplied parameters, including seed value(s)
+and the specification as to whether sampling with replacement is desired.
+
+Current date/time: 2018-11-04 18:09:42.101610
+
+(1) Enter text describing election id (e.g. name and date), then hit return
+    This is for documentation purposes only, and does not affect computation.
+    Example: 
+        Election ID >>> Gotham City Mayor's Race, November 2072
+
+    Election ID >>>     ------
+    Election ID = test
+
+(2) Enter one or more lines of text giving random number seed values.
+    These are typically decimal numbers, but may be arbitrary strings.
+    Embedded blanks OK, but initial and trailing blanks ignored.
+    Using decimal dice to generate these values is good practice.
+    Having different parties generate different seed values is good practice.
+    Having at least 24 random digits entered total is good practice.
+    When finished, enter a blank line.
+    Example: (USE NEW RANDOM VALUES, NOT THESE ONES)
+        seed value (or blank line when done) >>> 314525782315
+        seed value (or blank line when done) >>> 667241589410
+        seed value (or blank line when done) >>> 
+
+    seed value (or blank line when done) >>>     seed value (or blank line when done) >>>     ------
+    Seed = seed
+
+(3) Outputs will be in range  a  to  b , inclusive
+    Enter integer a (start of range)
+    Example:
+        a >>> 1
+
+    a >>> 
+    Enter integer b (end of range)
+    Example:
+        b >>> 213
+
+    b >>>     ------
+    a =  1 , b =  1000
+    N = 1000  (number of integers in set to draw sample from)
+
+(4) Are duplicates OK (i.e. sample with replacement)?
+    Example:
+        Duplicates OK (sample with replacement) (y or n)? >>> n
+
+    Duplicates OK (sample with replacement) (y or n)? >>>     ------
+    Duplicate outputs OK (that is, sampling 'with replacement').
+
+(5) Are you now asking for an expanded version of a previously generated sample?
+    Example:
+        Is this an expanded version of a previously generated sample? >>> n
+
+    Is this an expanded version of a previously generated sample? >>> 
+    How many outputs do you want (integer n)?
+    Example: 
+        n >>> 43
+
+    n >>>     ------
+    Request is for a new sample of size n = 10
+
+
+    Unsorted list of outputs:
+         315      474      734      604      864      614       48      673       71      992 
+
+    Sorted list of outputs:
+          48       71      315      474      604      614      673      734      864      992 
+
+(7) Saving results to file if desired.
+    Example: 
+        Name of output file (or blank line if saving results to file not desired): sample-2072-11-03.txt
+
+    Name of output file (or blank line if saving results to file not desired):     Results saved in output file: /tmp/test_sampler.out
+
+Current date/time: 2018-11-04 18:09:42.102270
+
+Done.
+.
+SAMPLER -- pseudo-random sample generation for election auditing or other uses.
+Written by Ronald L. Rivest.
+Sampler version:  1.1.0
+Python version:  2.7.15rc1
+Generates a sample of size n of integers from a to b (inclusive)
+based on supplied parameters, including seed value(s)
+and the specification as to whether sampling with replacement is desired.
+
+Current date/time: 2018-11-04 18:09:42.103223
+
+(1) Enter text describing election id (e.g. name and date), then hit return
+    This is for documentation purposes only, and does not affect computation.
+    Example: 
+        Election ID >>> Gotham City Mayor's Race, November 2072
+
+    Election ID >>>     ------
+    Election ID = test
+
+(2) Enter one or more lines of text giving random number seed values.
+    These are typically decimal numbers, but may be arbitrary strings.
+    Embedded blanks OK, but initial and trailing blanks ignored.
+    Using decimal dice to generate these values is good practice.
+    Having different parties generate different seed values is good practice.
+    Having at least 24 random digits entered total is good practice.
+    When finished, enter a blank line.
+    Example: (USE NEW RANDOM VALUES, NOT THESE ONES)
+        seed value (or blank line when done) >>> 314525782315
+        seed value (or blank line when done) >>> 667241589410
+        seed value (or blank line when done) >>> 
+
+    seed value (or blank line when done) >>>     seed value (or blank line when done) >>>     ------
+    Seed = seed
+
+(3) Outputs will be in range  a  to  b , inclusive
+    Enter integer a (start of range)
+    Example:
+        a >>> 1
+
+    a >>> 
+    Enter integer b (end of range)
+    Example:
+        b >>> 213
+
+    b >>>     ------
+    a =  1 , b =  1000
+    N = 1000  (number of integers in set to draw sample from)
+
+(4) Are duplicates OK (i.e. sample with replacement)?
+    Example:
+        Duplicates OK (sample with replacement) (y or n)? >>> n
+
+    Duplicates OK (sample with replacement) (y or n)? >>>     ------
+    Duplicate outputs not allowed (that is sampling 'without replacement')
+
+(5) Are you now asking for an expanded version of a previously generated sample?
+    Example:
+        Is this an expanded version of a previously generated sample? >>> n
+
+    Is this an expanded version of a previously generated sample? >>> 
+    What was the size of that previous sample? 
+    Example: 
+        What was the size of the previous sample? >>> 21
+
+    What was the size of the previous sample? >>> 
+    How many additional output elements do you now want? 
+    Example: 
+        How many additional output elements do you now want? >>> 25
+
+    How many additional output elements do you now want? >>> 
+    ------
+    Request is for an expanded sample.
+    Size of previous sample (number of elements to skip now) is 10
+    Number of new elements to generate is 10
+
+
+    Unsorted list of outputs in previous sample:
+         315      474      734      604      864      614       48      673       71      992 
+
+    Sorted list of outputs in previous sample:
+          48       71      315      474      604      614      673      734      864      992 
+
+    Unsorted list of new outputs:
+         884      316      714      363      248       18      569      841      304      462 
+
+    Sorted list of new outputs:
+          18      248      304      316      363      462      569      714      841      884 
+
+(7) Saving results to file if desired.
+    Example: 
+        Name of output file (or blank line if saving results to file not desired): sample-2072-11-03.txt
+
+    Name of output file (or blank line if saving results to file not desired):     Results saved in output file: /tmp/test_sampler.out
+
+Current date/time: 2018-11-04 18:09:42.321832
+
+Done.
+.                                     [100%]
+
+========================== 15 passed in 0.26 seconds ===========================
