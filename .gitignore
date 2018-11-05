@@ -2,4 +2,5 @@ sampler.egg-info
 .coverage
 htmlcov/
 .cache
+.eggs
 *,cover

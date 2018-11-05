@@ -1,6 +1,11 @@
 # Testing sampler
 
-If you have pytest and/or pytest-3, use these lines to test the basic sampler code.
+This partial test should work with no extra installs.
+
+    python setup.py test
+
+If you have pytest and/or pytest-3, use these lines to test the basic sampler
+code more thoroughly.
 
     pytest -s > /tmp/pytest-s.out
     diff -I '^===' -I '^Current' test/pytest-s.out /tmp/pytest-s.out || echo "Output differences detected"
