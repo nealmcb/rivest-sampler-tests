@@ -17,13 +17,7 @@ import sys
 import io
 import pytest
 import json
-
 import sampler
-
-# FIXME: resolve bizarre error using pytest-3 rather than pytest in cleaner way....
-# This doesn't seem to be a problem with non-pytest use of the code.
-if not 'generate_outputs' in dir(sampler):
-    from sampler import sampler
 
 testfile='test/tests.json'
 testspecs = json.load(open(testfile, 'r'))['tests']
