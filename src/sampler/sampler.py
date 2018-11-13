@@ -332,9 +332,12 @@ Done.
 ################################################################################
 
 from __future__ import print_function
-from builtins import str
-from builtins import input
-from builtins import range
+try:
+    # Python 3
+    from builtins import str, input, range
+except ImportError:
+    # Python 2
+    from __builtin__ import str, input, range
 
 # import library of cryptography hash functions
 # This program uses SHA-256 hash function
